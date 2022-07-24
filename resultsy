@@ -12,7 +12,7 @@ local launch = Instance.new("ImageButton")
 local TITLE = Instance.new("TextLabel")
 
 CriticalUI.Name = "CriticalUI"
-CriticalUI.Parent = game.Workspace
+CriticalUI.Parent = game.CoreGui
 CriticalUI.ResetOnSpawn = false
 
 main.Name = "main"
@@ -22,6 +22,7 @@ main.BackgroundTransparency = 0.550
 main.BorderSizePixel = 0
 main.Position = UDim2.new(0.343173444, 0, 0.220670387, 0)
 main.Size = UDim2.new(0, 255, 0, 300)
+main.Active = true
 
 greeningSide.Name = "greeningSide"
 greeningSide.Parent = main
