@@ -1,0 +1,375 @@
+local CriticalUI = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local greeningSide = Instance.new("Frame")
+local close = Instance.new("ImageButton")
+local Desc1 = Instance.new("TextLabel")
+local UICorner = Instance.new("UICorner")
+local Desc2 = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local Desc3 = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+local launch = Instance.new("ImageButton")
+local TITLE = Instance.new("TextLabel")
+
+CriticalUI.Name = "CriticalUI"
+CriticalUI.Parent = game.Workspace
+CriticalUI.ResetOnSpawn = false
+
+main.Name = "main"
+main.Parent = CriticalUI
+main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+main.BackgroundTransparency = 0.550
+main.BorderSizePixel = 0
+main.Position = UDim2.new(0.343173444, 0, 0.220670387, 0)
+main.Size = UDim2.new(0, 255, 0, 300)
+
+greeningSide.Name = "greeningSide"
+greeningSide.Parent = main
+greeningSide.BackgroundColor3 = Color3.fromRGB(78, 157, 0)
+greeningSide.BorderSizePixel = 0
+greeningSide.Position = UDim2.new(-0.0215324461, 0, -0.00266294181, 0)
+greeningSide.Size = UDim2.new(0, 5, 0, 300)
+
+close.Name = "close"
+close.Parent = main
+close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+close.BackgroundTransparency = 1.000
+close.Position = UDim2.new(0.90196079, 0, -4.19095159e-09, 0)
+close.Size = UDim2.new(0, 25, 0, 25)
+close.Image = "rbxassetid://180084703"
+
+Desc1.Name = "Desc1"
+Desc1.Parent = main
+Desc1.BackgroundColor3 = Color3.fromRGB(99, 108, 125)
+Desc1.BackgroundTransparency = 0.330
+Desc1.Position = UDim2.new(0, 0, 0.13333334, 0)
+Desc1.Size = UDim2.new(0, 230, 0, 50)
+Desc1.Font = Enum.Font.Cartoon
+Desc1.Text = "What is your purpose for running this script?"
+Desc1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Desc1.TextScaled = true
+Desc1.TextSize = 14.000
+Desc1.TextWrapped = true
+
+UICorner.Parent = Desc1
+
+Desc2.Name = "Desc2"
+Desc2.Parent = main
+Desc2.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
+Desc2.BackgroundTransparency = 0.330
+Desc2.Position = UDim2.new(0.0980392173, 0, 0.333333373, 0)
+Desc2.Size = UDim2.new(0, 230, 0, 50)
+Desc2.Font = Enum.Font.Cartoon
+Desc2.Text = "Are you a fan of 'Stop it, Slender!' ?"
+Desc2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Desc2.TextScaled = true
+Desc2.TextSize = 14.000
+Desc2.TextWrapped = true
+
+UICorner_2.Parent = Desc2
+
+Desc3.Name = "Desc3"
+Desc3.Parent = main
+Desc3.BackgroundColor3 = Color3.fromRGB(0, 85, 127)
+Desc3.BackgroundTransparency = 0.330
+Desc3.Position = UDim2.new(0, 0, 0.533333361, 0)
+Desc3.Size = UDim2.new(0, 230, 0, 50)
+Desc3.Font = Enum.Font.Cartoon
+Desc3.Text = "No need to answer what I asked. What program/App are you using to run this script?"
+Desc3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Desc3.TextScaled = true
+Desc3.TextSize = 14.000
+Desc3.TextWrapped = true
+
+UICorner_3.Parent = Desc3
+
+launch.Name = "launch"
+launch.Parent = main
+launch.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+launch.BackgroundTransparency = 1.000
+launch.Position = UDim2.new(0.156862751, 0, 0.766666651, 0)
+launch.Size = UDim2.new(0, 175, 0, 50)
+launch.Image = "rbxassetid://177528189"
+
+TITLE.Name = "TITLE"
+TITLE.Parent = main
+TITLE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TITLE.BackgroundTransparency = 1.000
+TITLE.Size = UDim2.new(0, 71, 0, 25)
+TITLE.Font = Enum.Font.SciFi
+TITLE.Text = "INTRO"
+TITLE.TextColor3 = Color3.fromRGB(0, 0, 0)
+TITLE.TextScaled = true
+TITLE.TextSize = 14.000
+TITLE.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+TITLE.TextStrokeTransparency = 0.310
+TITLE.TextWrapped = true
+
+local function closeButton()
+	local script = Instance.new('LocalScript', close)
+
+	local close = script.Parent
+	local main = script.Parent.Parent
+	close.MouseButton1Click:Connect(function()
+		main:Destroy()
+	end)
+end
+coroutine.wrap(closeButton)()
+local function launchButton() 
+	local script = Instance.new('LocalScript', launch)
+
+	local run = script.Parent
+	local main = script.Parent.Parent
+	run.MouseButton1Click:Connect(function()
+		-- Gui to Lua
+		-- Version: 3.2
+	
+		-- Instances:
+	
+		local ScreenGui = Instance.new("ScreenGui")
+		local Frame = Instance.new("Frame")
+		local UICorner = Instance.new("UICorner")
+		local Pages = Instance.new("TextLabel")
+		local Generators = Instance.new("TextLabel")
+		local Slender = Instance.new("TextLabel")
+	
+		--Properties:
+	
+		ScreenGui.Parent = game.CoreGui
+		ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	
+		Frame.Parent = ScreenGui
+		Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+		Frame.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+		Frame.Position = UDim2.new(0.0873715281, 0, 0.5, 0)
+		Frame.Selectable = true
+		Frame.Active = true
+		Frame.Draggable = true
+		Frame.Size = UDim2.new(0.100000001, 0, 0.300000012, 0)
+	
+		UICorner.Parent = Frame
+	
+		Pages.Name = "Pages"
+		Pages.Parent = Frame
+		Pages.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+		Pages.BorderSizePixel = 0
+		Pages.Position = UDim2.new(0, 0, 0.119189508, 0)
+		Pages.Size = UDim2.new(1, 0, 0.189511254, 0)
+		Pages.Font = Enum.Font.SourceSans
+		Pages.Text = "Show Pages (Z)"
+		Pages.TextColor3 = Color3.fromRGB(255, 255, 255)
+		Pages.TextScaled = true
+		Pages.TextSize = 14.000
+		Pages.TextWrapped = true
+	
+		Generators.Name = "GENERATORS"
+		Generators.Parent = Frame
+		Generators.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+		Generators.BorderSizePixel = 0
+		Generators.Position = UDim2.new(0, 0, 0.69129914, 0)
+		Generators.Size = UDim2.new(1, 0, 0.189511254, 0)
+		Generators.Font = Enum.Font.SourceSans
+		Generators.Text = "Show Generators (X)"
+		Generators.TextColor3 = Color3.fromRGB(255, 255, 255)
+		Generators.TextScaled = true
+		Generators.TextSize = 14.000
+		Generators.TextWrapped = true
+	
+		Slender.Name = "Slender"
+		Slender.Parent = Frame
+		Slender.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+		Slender.BorderSizePixel = 0
+		Slender.Position = UDim2.new(0, 0, 0.40524435, 0)
+		Slender.Size = UDim2.new(1, 0, 0.189511254, 0)
+		Slender.Font = Enum.Font.SourceSans
+		Slender.Text = "Show Slender (C)"
+		Slender.TextColor3 = Color3.fromRGB(255, 255, 255)
+		Slender.TextScaled = true
+		Slender.TextSize = 14.000
+		Slender.TextWrapped = true
+	
+		-- Scripts:
+	
+		local function TCIFN_fake_script() -- Pages.PageScript
+			local script = Instance.new('LocalScript', Pages)
+	
+			local InS = game:GetService("UserInputService")
+	
+			local function createGuiPages(parent)
+				if parent.Transparency == 0 then
+					local BGui = Instance.new("BillboardGui")
+					BGui.Parent = parent
+					BGui.AlwaysOnTop = true
+					BGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+					BGui.StudsOffset = Vector3.new(0, 3, 0)
+					BGui.Size = UDim2.new(5, 0, 1.5, 0)
+	
+					local text = Instance.new("TextLabel")
+					text.Parent = BGui
+					text.Text = "PAGE"
+					text.TextScaled = true
+					text.BackgroundTransparency = 1
+					text.Size = UDim2.new(1, 0, 1, 0)
+					text.TextColor3 = Color3.fromRGB(255, 255, 255)
+				else
+	
+				end
+			end
+	
+	
+			InS.InputBegan:Connect(function(input, GPE)
+				if input.KeyCode == Enum.KeyCode.Z then
+					if game.Workspace.MAP.Pages ~= nil and game.Workspace.MAP.HPageSpawns ~= nil then
+	
+						local model1 = game.Workspace.MAP.Pages
+	
+						for _, v in pairs(model1:GetChildren()) do
+							createGuiPages(v)
+	
+							v.Changed:Connect(function()
+								if v.Transparency == 1 then
+	
+									local BGui = v.BillboardGui
+									BGui:Destroy()
+								end
+							end)
+						end
+	
+						local model2 = game.Workspace.MAP.HPageSpawns
+	
+						for _, v in pairs(model2:GetChildren()) do
+							createGuiPages(v)
+	
+							v.Changed:Connect(function()
+								if v.Transparency == 1 then
+	
+									local BGui = v.BillboardGui
+									BGui:Destroy()
+								end
+							end)
+						end
+					end
+				end
+			end)
+		end
+		coroutine.wrap(TCIFN_fake_script)()
+		local function WBNHNPG_fake_script() -- Generators.GenScript
+			local script = Instance.new('LocalScript', Generators)
+	
+			local InS = game:GetService("UserInputService")
+	
+			local function createGuiGens(parent)
+				local BGui = Instance.new("BillboardGui")
+				BGui.Parent = parent
+				BGui.AlwaysOnTop = true
+				BGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+				BGui.StudsOffset = Vector3.new(0, 3, 0)
+				BGui.Size = UDim2.new(5, 0, 1.5, 0)
+	
+				local text = Instance.new("TextLabel")
+				text.Parent = BGui
+				text.TextScaled = true
+				text.BackgroundTransparency = 1
+				text.Size = UDim2.new(1, 0, 1, 0)
+				text.TextColor3 = Color3.fromRGB(0, 255, 0)
+				text.Text = "Generator"
+	
+				if parent:FindFirstChild("On") then
+	
+					if parent.On.Value == true then
+						text.Text = "Generator (Activated)"
+						text.TextColor3 = Color3.fromRGB(0, 0, 255)
+					end
+				end
+			end
+	
+			InS.InputBegan:Connect(function(input, GPE)
+				if input.KeyCode == Enum.KeyCode.X then
+	
+					local model = game.Workspace.MAP.GENS
+					for _, v in pairs(model:GetChildren()) do
+						createGuiGens(v)
+	
+						if v:FindFirstChild("On") then
+							local isOn = v.On
+	
+							isOn.Changed:Connect(function()
+								v.BillboardGui.TextLabel.Text = "Generator (Activated)"
+								v.BillboardGui.TextLabel.TextColor3 = Color3.fromRGB(0, 0, 255)
+							end)
+						else
+	
+						end
+					end
+	
+				end
+			end)
+		end
+		coroutine.wrap(WBNHNPG_fake_script)()
+		local function DXQRVQV_fake_script() -- Slender.SlenderScript
+			local script = Instance.new('LocalScript', Slender)
+	
+			local InS = game:GetService("UserInputService")
+	
+			local function createGuiSlender(parent)
+				local BGui = Instance.new("BillboardGui")
+				BGui.Parent = parent
+				BGui.AlwaysOnTop = true
+				BGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+				BGui.StudsOffset = Vector3.new(0, 3, 0)
+				BGui.Size = UDim2.new(5, 0, 1.5, 0)
+	
+				local text = Instance.new("TextLabel")
+				text.Parent = BGui
+				text.Text = "SLENDER"
+				text.TextScaled = true
+				text.BackgroundTransparency = 1
+				text.Size = UDim2.new(1, 0, 1, 0)
+				text.TextColor3 = Color3.fromRGB(255, 0, 0)
+			end
+	
+	
+			InS.InputBegan:Connect(function(input, GPE)
+				if input.KeyCode == Enum.KeyCode.C then
+	
+					for _, v in pairs(game.Workspace:GetChildren()) do
+						if v:FindFirstChild("SlenderProp") then
+							createGuiSlender(v)
+						end
+					end
+				end
+	
+			end)
+		end
+		coroutine.wrap(DXQRVQV_fake_script)()
+		local function LSGPTFK_fake_script() -- Frame.HideShow
+			local script = Instance.new('LocalScript', Frame)
+	
+			local frame = script.Parent
+			local InS = game:GetService("UserInputService")
+	
+			InS.InputBegan:Connect(function(input, GPE)
+				if input.KeyCode == Enum.KeyCode.LeftControl then
+					if frame.Visible == true then
+						frame.Visible = false
+					else
+						frame.Visible = true
+					end
+				end
+			end)
+		end
+		coroutine.wrap(LSGPTFK_fake_script)()
+		wait()
+		main:Destroy()
+	end)
+end
+coroutine.wrap(launchButton)()
+local function Draggable()
+	local script = Instance.new('Script', main)
+
+	local scr = script.Parent
+	scr.Active = true
+	scr.Draggable = true
+	scr.Selectable = true
+end
+coroutine.wrap(Draggable)()
