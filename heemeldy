@@ -12,7 +12,7 @@ local launch = Instance.new("ImageButton")
 local TITLE = Instance.new("TextLabel")
 
 CriticalUI.Name = "CriticalUI"
-CriticalUI.Parent = game.Workspace
+CriticalUI.Parent = game.CoreGui
 CriticalUI.ResetOnSpawn = false
 
 main.Name = "main"
@@ -115,7 +115,7 @@ local function closeButton()
 	end)
 end
 coroutine.wrap(closeButton)()
-local function launchButton() 
+local function runButton() 
 	local script = Instance.new('LocalScript', launch)
 
 	local run = script.Parent
@@ -363,8 +363,8 @@ local function launchButton()
 		main:Destroy()
 	end)
 end
-coroutine.wrap(launchButton)()
-local function Draggable()
+coroutine.wrap(runButton)()
+local function draggabler()
 	local script = Instance.new('Script', main)
 
 	local scr = script.Parent
@@ -372,4 +372,10 @@ local function Draggable()
 	scr.Draggable = true
 	scr.Selectable = true
 end
-coroutine.wrap(Draggable)()
+coroutine.wrap(draggabler)()
+local function functionStringConnected1() -- CriticalUI.FunctionStringConnected1 
+	local script = Instance.new('LocalScript', CriticalUI)
+
+	game:GetService('SoundService').RespectFilteringEnabled = false
+end
+coroutine.wrap(functionStringConnected1)()
