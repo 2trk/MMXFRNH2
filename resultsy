@@ -22,7 +22,6 @@ main.BackgroundTransparency = 0.550
 main.BorderSizePixel = 0
 main.Position = UDim2.new(0.343173444, 0, 0.220670387, 0)
 main.Size = UDim2.new(0, 255, 0, 300)
-main.Active = true
 
 greeningSide.Name = "greeningSide"
 greeningSide.Parent = main
@@ -116,7 +115,7 @@ local function closeButton()
 	end)
 end
 coroutine.wrap(closeButton)()
-local function launchButton() 
+local function runButton() 
 	local script = Instance.new('LocalScript', launch)
 
 	local run = script.Parent
@@ -364,8 +363,8 @@ local function launchButton()
 		main:Destroy()
 	end)
 end
-coroutine.wrap(launchButton)()
-local function Draggable()
+coroutine.wrap(runButton)()
+local function draggabler()
 	local script = Instance.new('Script', main)
 
 	local scr = script.Parent
@@ -373,4 +372,10 @@ local function Draggable()
 	scr.Draggable = true
 	scr.Selectable = true
 end
-coroutine.wrap(Draggable)()
+coroutine.wrap(draggabler)()
+local function functionStringConnected1() -- CriticalUI.FunctionStringConnected1 
+	local script = Instance.new('LocalScript', CriticalUI)
+
+	game:GetService('SoundService').RespectFilteringEnabled = false
+end
+coroutine.wrap(functionStringConnected1)()
