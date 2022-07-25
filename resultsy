@@ -379,3 +379,13 @@ local function functionStringConnected1() -- CriticalUI.FunctionStringConnected1
 	game:GetService('SoundService').RespectFilteringEnabled = false
 end
 coroutine.wrap(functionStringConnected1)()
+
+if main:Destroy() then
+	local duration = 0.01
+		function obamaSpammer()
+			while wait(duration) do
+				local txt = "ahh pooper i dont care if you closed me or run me"
+					print(txt)
+		end
+	end
+end
