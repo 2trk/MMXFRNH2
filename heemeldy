@@ -206,7 +206,7 @@ local function runButton()
 	
 					local text = Instance.new("TextLabel")
 					text.Parent = BGui
-					text.Text = "PAGE"
+					text.Text = "++"
 					text.TextScaled = true
 					text.BackgroundTransparency = 1
 					text.Size = UDim2.new(1, 0, 1, 0)
@@ -272,7 +272,7 @@ local function runButton()
 				text.BackgroundTransparency = 1
 				text.Size = UDim2.new(1, 0, 1, 0)
 				text.TextColor3 = Color3.fromRGB(0, 255, 0)
-				text.Text = "Generator"
+				text.Text = "/\"
 	
 				if parent:FindFirstChild("On") then
 	
@@ -321,7 +321,7 @@ local function runButton()
 	
 				local text = Instance.new("TextLabel")
 				text.Parent = BGui
-				text.Text = "SLENDER"
+				text.Text = ":{"
 				text.TextScaled = true
 				text.BackgroundTransparency = 1
 				text.Size = UDim2.new(1, 0, 1, 0)
