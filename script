@@ -1,381 +1,930 @@
-local CriticalUI = Instance.new("ScreenGui")
-local main = Instance.new("Frame")
-local greeningSide = Instance.new("Frame")
-local close = Instance.new("ImageButton")
-local Desc1 = Instance.new("TextLabel")
-local UICorner = Instance.new("UICorner")
-local Desc2 = Instance.new("TextLabel")
-local UICorner_2 = Instance.new("UICorner")
-local Desc3 = Instance.new("TextLabel")
-local UICorner_3 = Instance.new("UICorner")
-local launch = Instance.new("ImageButton")
-local TITLE = Instance.new("TextLabel")
+game:GetService("StarterGui"):SetCore("SendNotification", {
+	Title = "If you wanna know,";
+	Text = "CREEPSTU is the founder, SKEPPY0_0MAN is the scripter";
+	Duration = math.huge;
+	Button1 = "K?";
+})
 
-CriticalUI.Name = "CriticalUI"
-CriticalUI.Parent = game.CoreGui
-CriticalUI.ResetOnSpawn = false
+local fgb = game.CoreGui:FindFirstChild("GoodBoi")
+if fgb then
+	fgb:Destroy()
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = "SKEPPY0_0MAN:";
+		Text = "Did you just re-execute this?";
+		Duration = math.huge; 
+		Button1 = "Yes, boss.";
+	})
+end
 
-main.Name = "main"
-main.Parent = CriticalUI
-main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-main.BackgroundTransparency = 0.550
-main.BorderSizePixel = 0
-main.Position = UDim2.new(0.343173444, 0, 0.220670387, 0)
-main.Size = UDim2.new(0, 255, 0, 300)
+local Converted = {
+	["_GoodBoi"] = Instance.new("ScreenGui");
+	["_Toggle"] = Instance.new("TextButton");
+	["_UICorner"] = Instance.new("UICorner");
+	["_ToggleCode"] = Instance.new("LocalScript");
+	["_UITextSizeConstraint"] = Instance.new("UITextSizeConstraint");
+	["_BlurRemover"] = Instance.new("LocalScript");
+	["_Main"] = Instance.new("Frame");
+	["_UICorner1"] = Instance.new("UICorner");
+	["_BottomBar"] = Instance.new("Frame");
+	["_UICorner2"] = Instance.new("UICorner");
+	["_Icon"] = Instance.new("ImageButton");
+	["_CloseGUI"] = Instance.new("LocalScript");
+	["_UICorner3"] = Instance.new("UICorner");
+	["_Title"] = Instance.new("TextLabel");
+	["_LocalScript"] = Instance.new("LocalScript");
+	["_UITextSizeConstraint1"] = Instance.new("UITextSizeConstraint");
+	["_Siapa?"] = Instance.new("ImageButton");
+	["_LocalPlayerCode"] = Instance.new("LocalScript");
+	["_UICorner4"] = Instance.new("UICorner");
+	["_Slogan"] = Instance.new("TextLabel");
+	["_LocalScript1"] = Instance.new("LocalScript");
+	["_UITextSizeConstraint2"] = Instance.new("UITextSizeConstraint");
+	["_Extension"] = Instance.new("Frame");
+	["_FrameOfMain"] = Instance.new("Frame");
+	["_UICorner5"] = Instance.new("UICorner");
+	["_Extra-SP"] = Instance.new("TextButton");
+	["_LocalScript2"] = Instance.new("LocalScript");
+	["_TakeSheriff'sGun"] = Instance.new("TextButton");
+	["_LocalScript3"] = Instance.new("LocalScript");
+	["_Aimbot"] = Instance.new("TextButton");
+	["_LocalScript4"] = Instance.new("LocalScript");
+	["_UnboxCrates"] = Instance.new("TextButton");
+	["_LocalScript5"] = Instance.new("LocalScript");
+	["_CollectCoins"] = Instance.new("TextButton");
+	["_LocalScript6"] = Instance.new("LocalScript");
+	["_TeleportToLobby"] = Instance.new("TextButton");
+	["_LocalScript7"] = Instance.new("LocalScript");
+	["_2FrameOfMain"] = Instance.new("Frame");
+	["_UICorner6"] = Instance.new("UICorner");
+	["_MurdKonsol"] = Instance.new("TextLabel");
+	["_UIStroke"] = Instance.new("UIStroke");
+	["_SheriffKonsol"] = Instance.new("TextLabel");
+	["_UIStroke1"] = Instance.new("UIStroke");
+	["_LocalScript8"] = Instance.new("LocalScript");
+	["_DropShadowHolder"] = Instance.new("Frame");
+	["_DropShadow"] = Instance.new("ImageLabel");
+	["_Dragger"] = Instance.new("LocalScript");
+	["_DropShadowHolder1"] = Instance.new("Frame");
+	["_DropShadow1"] = Instance.new("ImageLabel");
+	["_SoundSystem"] = Instance.new("LocalScript");
+	["_clicking"] = Instance.new("Sound");
+	["_hovers"] = Instance.new("Sound");
+	["_LocalScript9"] = Instance.new("LocalScript");
+}
 
-greeningSide.Name = "greeningSide"
-greeningSide.Parent = main
-greeningSide.BackgroundColor3 = Color3.fromRGB(78, 157, 0)
-greeningSide.BorderSizePixel = 0
-greeningSide.Position = UDim2.new(-0.0215324461, 0, -0.00266294181, 0)
-greeningSide.Size = UDim2.new(0, 5, 0, 300)
+Converted["_GoodBoi"].IgnoreGuiInset = true
+Converted["_GoodBoi"].ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
+Converted["_GoodBoi"].Name = "GoodBoi"
 
-close.Name = "close"
-close.Parent = main
-close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-close.BackgroundTransparency = 1.000
-close.Position = UDim2.new(0.90196079, 0, -4.19095159e-09, 0)
-close.Size = UDim2.new(0, 25, 0, 25)
-close.Image = "rbxassetid://180084703"
+Converted["_Toggle"].Font = Enum.Font.Gotham
+Converted["_Toggle"].Text = "Restore Down"
+Converted["_Toggle"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Toggle"].TextScaled = true
+Converted["_Toggle"].TextSize = 14
+Converted["_Toggle"].TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Toggle"].TextWrapped = true
+Converted["_Toggle"].Active = false
+Converted["_Toggle"].AnchorPoint = Vector2.new(0.5, 1)
+Converted["_Toggle"].BackgroundColor3 = Color3.fromRGB(46.000001057982445, 46.000001057982445, 46.000001057982445)
+Converted["_Toggle"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggle"].BorderSizePixel = 0
+Converted["_Toggle"].Position = UDim2.new(0.5, 0, 1, -70)
+Converted["_Toggle"].Selectable = false
+Converted["_Toggle"].Size = UDim2.new(0, 100, 0, 50)
+Converted["_Toggle"].Name = "Toggle"
+Converted["_Toggle"].Parent = Converted["_GoodBoi"]
 
-Desc1.Name = "Desc1"
-Desc1.Parent = main
-Desc1.BackgroundColor3 = Color3.fromRGB(99, 108, 125)
-Desc1.BackgroundTransparency = 0.330
-Desc1.Position = UDim2.new(0, 0, 0.13333334, 0)
-Desc1.Size = UDim2.new(0, 230, 0, 50)
-Desc1.Font = Enum.Font.Cartoon
-Desc1.Text = "What is your purpose for running this script?"
-Desc1.TextColor3 = Color3.fromRGB(255, 255, 255)
-Desc1.TextScaled = true
-Desc1.TextSize = 14.000
-Desc1.TextWrapped = true
+Converted["_UICorner"].CornerRadius = UDim.new(0, 10)
+Converted["_UICorner"].Parent = Converted["_Toggle"]
 
-UICorner.Parent = Desc1
+Converted["_UITextSizeConstraint"].MaxTextSize = 14
+Converted["_UITextSizeConstraint"].Parent = Converted["_Toggle"]
 
-Desc2.Name = "Desc2"
-Desc2.Parent = main
-Desc2.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
-Desc2.BackgroundTransparency = 0.330
-Desc2.Position = UDim2.new(0.0980392173, 0, 0.333333373, 0)
-Desc2.Size = UDim2.new(0, 230, 0, 50)
-Desc2.Font = Enum.Font.Cartoon
-Desc2.Text = "Are you a fan of 'Stop it, Slender!' ?"
-Desc2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Desc2.TextScaled = true
-Desc2.TextSize = 14.000
-Desc2.TextWrapped = true
+Converted["_Main"].AnchorPoint = Vector2.new(0.5, 1)
+Converted["_Main"].BackgroundColor3 = Color3.fromRGB(34.00000177323818, 40.00000141561031, 34.00000177323818)
+Converted["_Main"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Main"].BorderSizePixel = 0
+Converted["_Main"].Position = UDim2.new(0, 0, 50, 0)
+Converted["_Main"].Size = UDim2.new(0, 300, 0, 200)
+Converted["_Main"].Name = "Main"
+Converted["_Main"].Parent = Converted["_Toggle"]
 
-UICorner_2.Parent = Desc2
+Converted["_UICorner1"].CornerRadius = UDim.new(0, 10)
+Converted["_UICorner1"].Parent = Converted["_Main"]
 
-Desc3.Name = "Desc3"
-Desc3.Parent = main
-Desc3.BackgroundColor3 = Color3.fromRGB(0, 85, 127)
-Desc3.BackgroundTransparency = 0.330
-Desc3.Position = UDim2.new(0, 0, 0.533333361, 0)
-Desc3.Size = UDim2.new(0, 230, 0, 50)
-Desc3.Font = Enum.Font.Cartoon
-Desc3.Text = "No need to answer what I asked. What program/App are you using to run this script?"
-Desc3.TextColor3 = Color3.fromRGB(255, 255, 255)
-Desc3.TextScaled = true
-Desc3.TextSize = 14.000
-Desc3.TextWrapped = true
+Converted["_BottomBar"].AnchorPoint = Vector2.new(1, 1)
+Converted["_BottomBar"].BackgroundColor3 = Color3.fromRGB(46.000001057982445, 46.000001057982445, 46.000001057982445)
+Converted["_BottomBar"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_BottomBar"].BorderSizePixel = 0
+Converted["_BottomBar"].Position = UDim2.new(1, 0, 1, 0)
+Converted["_BottomBar"].Size = UDim2.new(1, 0, 0, 30)
+Converted["_BottomBar"].ZIndex = 2
+Converted["_BottomBar"].Name = "BottomBar"
+Converted["_BottomBar"].Parent = Converted["_Main"]
 
-UICorner_3.Parent = Desc3
+Converted["_UICorner2"].CornerRadius = UDim.new(0, 10)
+Converted["_UICorner2"].Parent = Converted["_BottomBar"]
 
-launch.Name = "launch"
-launch.Parent = main
-launch.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-launch.BackgroundTransparency = 1.000
-launch.Position = UDim2.new(0.156862751, 0, 0.766666651, 0)
-launch.Size = UDim2.new(0, 175, 0, 50)
-launch.Image = "rbxassetid://177528189"
+Converted["_Icon"].Image = "rbxassetid://6510893737"
+Converted["_Icon"].ImageContent = Content
+Converted["_Icon"].AnchorPoint = Vector2.new(0, 0.5)
+Converted["_Icon"].BackgroundColor3 = Color3.fromRGB(111.00000858306885, 111.00000858306885, 111.00000858306885)
+Converted["_Icon"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Icon"].BorderSizePixel = 0
+Converted["_Icon"].Position = UDim2.new(0, 3, 0.5, 0)
+Converted["_Icon"].Size = UDim2.new(0, 23, 0, 23)
+Converted["_Icon"].ZIndex = 2
+Converted["_Icon"].Name = "Icon"
+Converted["_Icon"].Parent = Converted["_BottomBar"]
 
-TITLE.Name = "TITLE"
-TITLE.Parent = main
-TITLE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TITLE.BackgroundTransparency = 1.000
-TITLE.Size = UDim2.new(0, 71, 0, 25)
-TITLE.Font = Enum.Font.SciFi
-TITLE.Text = "INTRO"
-TITLE.TextColor3 = Color3.fromRGB(0, 0, 0)
-TITLE.TextScaled = true
-TITLE.TextSize = 14.000
-TITLE.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-TITLE.TextStrokeTransparency = 0.310
-TITLE.TextWrapped = true
+Converted["_UICorner3"].CornerRadius = UDim.new(0, 10)
+Converted["_UICorner3"].Parent = Converted["_Icon"]
 
-local function closeButton()
-	local script = Instance.new('LocalScript', close)
+Converted["_Title"].Font = Enum.Font.Gotham
+Converted["_Title"].Text = "Screepstu Mod"
+Converted["_Title"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Title"].TextScaled = true
+Converted["_Title"].TextSize = 15
+Converted["_Title"].TextWrapped = true
+Converted["_Title"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_Title"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Title"].BackgroundTransparency = 1
+Converted["_Title"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Title"].BorderSizePixel = 0
+Converted["_Title"].ClipsDescendants = true
+Converted["_Title"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_Title"].Size = UDim2.new(0, 200, 1, 0)
+Converted["_Title"].ZIndex = 2
+Converted["_Title"].Name = "Title"
+Converted["_Title"].Parent = Converted["_BottomBar"]
 
-	local close = script.Parent
-	local main = script.Parent.Parent
-	close.MouseButton1Click:Connect(function()
-		main:Destroy()
+Converted["_UITextSizeConstraint1"].MaxTextSize = 15
+Converted["_UITextSizeConstraint1"].Parent = Converted["_Title"]
+
+Converted["_Siapa?"].Image = "http://www.roblox.com/asset/?id=6031280883"
+Converted["_Siapa?"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Siapa?"].ImageContent = Content
+Converted["_Siapa?"].AnchorPoint = Vector2.new(1, 0.5)
+Converted["_Siapa?"].BackgroundColor3 = Color3.fromRGB(111.00000858306885, 111.00000858306885, 111.00000858306885)
+Converted["_Siapa?"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Siapa?"].BorderSizePixel = 0
+Converted["_Siapa?"].Position = UDim2.new(1, -3, 0.5, 0)
+Converted["_Siapa?"].Size = UDim2.new(0, 23, 0, 23)
+Converted["_Siapa?"].ZIndex = 2
+Converted["_Siapa?"].Name = "Siapa?"
+Converted["_Siapa?"].Parent = Converted["_BottomBar"]
+
+Converted["_UICorner4"].CornerRadius = UDim.new(0, 10)
+Converted["_UICorner4"].Parent = Converted["_Siapa?"]
+
+Converted["_Slogan"].Font = Enum.Font.Gotham
+Converted["_Slogan"].Text = "@creepstu, @SKEPPY0_0MAN"
+Converted["_Slogan"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Slogan"].TextScaled = true
+Converted["_Slogan"].TextSize = 15
+Converted["_Slogan"].TextWrapped = true
+Converted["_Slogan"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_Slogan"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Slogan"].BackgroundTransparency = 1
+Converted["_Slogan"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Slogan"].BorderSizePixel = 0
+Converted["_Slogan"].ClipsDescendants = true
+Converted["_Slogan"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_Slogan"].ZIndex = 2
+Converted["_Slogan"].Name = "Slogan"
+Converted["_Slogan"].Parent = Converted["_BottomBar"]
+
+Converted["_UITextSizeConstraint2"].MaxTextSize = 15
+Converted["_UITextSizeConstraint2"].Parent = Converted["_Slogan"]
+
+Converted["_Extension"].AnchorPoint = Vector2.new(1, 1)
+Converted["_Extension"].BackgroundColor3 = Color3.fromRGB(46.000001057982445, 46.000001057982445, 46.000001057982445)
+Converted["_Extension"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Extension"].BorderSizePixel = 0
+Converted["_Extension"].Position = UDim2.new(1, 0, 1, -15)
+Converted["_Extension"].Size = UDim2.new(1, 0, 0, 15)
+Converted["_Extension"].Name = "Extension"
+Converted["_Extension"].Parent = Converted["_Main"]
+
+Converted["_FrameOfMain"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_FrameOfMain"].BackgroundColor3 = Color3.fromRGB(34.00000177323818, 40.00000141561031, 34.00000177323818)
+Converted["_FrameOfMain"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_FrameOfMain"].BorderSizePixel = 0
+Converted["_FrameOfMain"].ClipsDescendants = true
+Converted["_FrameOfMain"].Position = UDim2.new(0.5, 0, 0.5, -15)
+Converted["_FrameOfMain"].Size = UDim2.new(1, 0, 1, -30)
+Converted["_FrameOfMain"].Name = "FrameOfMain"
+Converted["_FrameOfMain"].Parent = Converted["_Main"]
+
+Converted["_UICorner5"].CornerRadius = UDim.new(0, 10)
+Converted["_UICorner5"].Parent = Converted["_FrameOfMain"]
+
+Converted["_Extra-SP"].Font = Enum.Font.Gotham
+Converted["_Extra-SP"].Text = "Extra-SP"
+Converted["_Extra-SP"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Extra-SP"].TextSize = 14
+Converted["_Extra-SP"].Style = Enum.ButtonStyle.RobloxButton
+Converted["_Extra-SP"].AnchorPoint = Vector2.new(0, 0.5)
+Converted["_Extra-SP"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Extra-SP"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Extra-SP"].BorderSizePixel = 0
+Converted["_Extra-SP"].Position = UDim2.new(0, 0, 0.5, 0)
+Converted["_Extra-SP"].Size = UDim2.new(0, 150, 0, 55)
+Converted["_Extra-SP"].Name = "Extra-SP"
+Converted["_Extra-SP"].Parent = Converted["_FrameOfMain"]
+
+Converted["_TakeSheriff'sGun"].Font = Enum.Font.Gotham
+Converted["_TakeSheriff'sGun"].Text = "Take Sheriff's Gun"
+Converted["_TakeSheriff'sGun"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TakeSheriff'sGun"].TextSize = 14
+Converted["_TakeSheriff'sGun"].Style = Enum.ButtonStyle.RobloxButton
+Converted["_TakeSheriff'sGun"].AnchorPoint = Vector2.new(1, 0.5)
+Converted["_TakeSheriff'sGun"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TakeSheriff'sGun"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TakeSheriff'sGun"].BorderSizePixel = 0
+Converted["_TakeSheriff'sGun"].Position = UDim2.new(1, 0, 0.5, 0)
+Converted["_TakeSheriff'sGun"].Size = UDim2.new(0, 150, 0, 55)
+Converted["_TakeSheriff'sGun"].Name = "TakeSheriff'sGun"
+Converted["_TakeSheriff'sGun"].Parent = Converted["_FrameOfMain"]
+
+Converted["_Aimbot"].Font = Enum.Font.Gotham
+Converted["_Aimbot"].Text = "Aimbot"
+Converted["_Aimbot"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Aimbot"].TextSize = 14
+Converted["_Aimbot"].Style = Enum.ButtonStyle.RobloxButton
+Converted["_Aimbot"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Aimbot"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Aimbot"].BorderSizePixel = 0
+Converted["_Aimbot"].Size = UDim2.new(0, 150, 0, 55)
+Converted["_Aimbot"].Name = "Aimbot"
+Converted["_Aimbot"].Parent = Converted["_FrameOfMain"]
+
+Converted["_UnboxCrates"].Font = Enum.Font.Gotham
+Converted["_UnboxCrates"].Text = "Unbox Crates"
+Converted["_UnboxCrates"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_UnboxCrates"].TextSize = 14
+Converted["_UnboxCrates"].Style = Enum.ButtonStyle.RobloxButton
+Converted["_UnboxCrates"].AnchorPoint = Vector2.new(1, 1)
+Converted["_UnboxCrates"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_UnboxCrates"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_UnboxCrates"].BorderSizePixel = 0
+Converted["_UnboxCrates"].Position = UDim2.new(1, 0, 1, 0)
+Converted["_UnboxCrates"].Size = UDim2.new(0, 150, 0, 55)
+Converted["_UnboxCrates"].Name = "UnboxCrates"
+Converted["_UnboxCrates"].Parent = Converted["_FrameOfMain"]
+
+Converted["_CollectCoins"].Font = Enum.Font.Gotham
+Converted["_CollectCoins"].Text = "Collect Coins"
+Converted["_CollectCoins"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_CollectCoins"].TextSize = 14
+Converted["_CollectCoins"].Style = Enum.ButtonStyle.RobloxButton
+Converted["_CollectCoins"].AnchorPoint = Vector2.new(1, 0)
+Converted["_CollectCoins"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_CollectCoins"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_CollectCoins"].BorderSizePixel = 0
+Converted["_CollectCoins"].Position = UDim2.new(1, 0, 0, 0)
+Converted["_CollectCoins"].Size = UDim2.new(0, 150, 0, 55)
+Converted["_CollectCoins"].Name = "CollectCoins"
+Converted["_CollectCoins"].Parent = Converted["_FrameOfMain"]
+
+Converted["_TeleportToLobby"].Font = Enum.Font.Gotham
+Converted["_TeleportToLobby"].Text = "Teleport to Lobby"
+Converted["_TeleportToLobby"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TeleportToLobby"].TextSize = 14
+Converted["_TeleportToLobby"].Style = Enum.ButtonStyle.RobloxButton
+Converted["_TeleportToLobby"].AnchorPoint = Vector2.new(0, 1)
+Converted["_TeleportToLobby"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TeleportToLobby"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TeleportToLobby"].BorderSizePixel = 0
+Converted["_TeleportToLobby"].Position = UDim2.new(0, 0, 1, 0)
+Converted["_TeleportToLobby"].Size = UDim2.new(0, 150, 0, 55)
+Converted["_TeleportToLobby"].Name = "TeleportToLobby"
+Converted["_TeleportToLobby"].Parent = Converted["_FrameOfMain"]
+
+Converted["_2FrameOfMain"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_2FrameOfMain"].BackgroundColor3 = Color3.fromRGB(34.00000177323818, 40.00000141561031, 34.00000177323818)
+Converted["_2FrameOfMain"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_2FrameOfMain"].BorderSizePixel = 0
+Converted["_2FrameOfMain"].ClipsDescendants = true
+Converted["_2FrameOfMain"].Position = UDim2.new(0.5, 0, 0.5, -15)
+Converted["_2FrameOfMain"].Size = UDim2.new(1, 0, 1, -30)
+Converted["_2FrameOfMain"].Visible = false
+Converted["_2FrameOfMain"].Name = "2FrameOfMain"
+Converted["_2FrameOfMain"].Parent = Converted["_Main"]
+
+Converted["_UICorner6"].CornerRadius = UDim.new(0, 10)
+Converted["_UICorner6"].Parent = Converted["_2FrameOfMain"]
+
+Converted["_MurdKonsol"].Font = Enum.Font.Gotham
+Converted["_MurdKonsol"].Text = "Murderer: ?"
+Converted["_MurdKonsol"].TextColor3 = Color3.fromRGB(179.000004529953, 179.000004529953, 179.000004529953)
+Converted["_MurdKonsol"].TextScaled = true
+Converted["_MurdKonsol"].TextSize = 15
+Converted["_MurdKonsol"].TextWrapped = true
+Converted["_MurdKonsol"].AnchorPoint = Vector2.new(0.5, 0)
+Converted["_MurdKonsol"].BackgroundColor3 = Color3.fromRGB(46.000001057982445, 46.000001057982445, 46.000001057982445)
+Converted["_MurdKonsol"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_MurdKonsol"].BorderSizePixel = 0
+Converted["_MurdKonsol"].Position = UDim2.new(0.5, 0, 0, 16)
+Converted["_MurdKonsol"].Size = UDim2.new(1, -32, 0, 32)
+Converted["_MurdKonsol"].Name = "MurdKonsol"
+Converted["_MurdKonsol"].Parent = Converted["_2FrameOfMain"]
+
+Converted["_UIStroke"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+Converted["_UIStroke"].Color = Color3.fromRGB(255, 0, 0)
+Converted["_UIStroke"].Thickness = 2
+Converted["_UIStroke"].Parent = Converted["_MurdKonsol"]
+
+Converted["_SheriffKonsol"].Font = Enum.Font.Gotham
+Converted["_SheriffKonsol"].Text = "Sheriff: ?"
+Converted["_SheriffKonsol"].TextColor3 = Color3.fromRGB(179.000004529953, 179.000004529953, 179.000004529953)
+Converted["_SheriffKonsol"].TextScaled = true
+Converted["_SheriffKonsol"].TextSize = 15
+Converted["_SheriffKonsol"].TextWrapped = true
+Converted["_SheriffKonsol"].AnchorPoint = Vector2.new(0.5, 0)
+Converted["_SheriffKonsol"].BackgroundColor3 = Color3.fromRGB(46.000001057982445, 46.000001057982445, 46.000001057982445)
+Converted["_SheriffKonsol"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_SheriffKonsol"].BorderSizePixel = 0
+Converted["_SheriffKonsol"].Position = UDim2.new(0.5, 0, 0, 52)
+Converted["_SheriffKonsol"].Size = UDim2.new(1, -32, 0, 32)
+Converted["_SheriffKonsol"].Name = "SheriffKonsol"
+Converted["_SheriffKonsol"].Parent = Converted["_2FrameOfMain"]
+
+Converted["_UIStroke1"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+Converted["_UIStroke1"].Color = Color3.fromRGB(0, 0, 255)
+Converted["_UIStroke1"].Thickness = 2
+Converted["_UIStroke1"].Parent = Converted["_SheriffKonsol"]
+
+Converted["_DropShadowHolder"].BackgroundTransparency = 1
+Converted["_DropShadowHolder"].BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036)
+Converted["_DropShadowHolder"].BorderSizePixel = 0
+Converted["_DropShadowHolder"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_DropShadowHolder"].ZIndex = 0
+Converted["_DropShadowHolder"].Name = "DropShadowHolder"
+Converted["_DropShadowHolder"].Parent = Converted["_Main"]
+
+Converted["_DropShadow"].Image = "rbxassetid://6015897843"
+Converted["_DropShadow"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_DropShadow"].ImageContent = Content
+Converted["_DropShadow"].ImageTransparency = 0.5
+Converted["_DropShadow"].ScaleType = Enum.ScaleType.Slice
+Converted["_DropShadow"].SliceCenter = Rect.new(49, 49, 450, 450)
+Converted["_DropShadow"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_DropShadow"].BackgroundTransparency = 1
+Converted["_DropShadow"].BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036)
+Converted["_DropShadow"].BorderSizePixel = 0
+Converted["_DropShadow"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_DropShadow"].Size = UDim2.new(1, 47, 1, 47)
+Converted["_DropShadow"].ZIndex = 0
+Converted["_DropShadow"].Name = "DropShadow"
+Converted["_DropShadow"].Parent = Converted["_DropShadowHolder"]
+
+Converted["_DropShadowHolder1"].BackgroundTransparency = 1
+Converted["_DropShadowHolder1"].BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036)
+Converted["_DropShadowHolder1"].BorderSizePixel = 0
+Converted["_DropShadowHolder1"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_DropShadowHolder1"].ZIndex = 0
+Converted["_DropShadowHolder1"].Name = "DropShadowHolder"
+Converted["_DropShadowHolder1"].Parent = Converted["_Toggle"]
+
+Converted["_DropShadow1"].Image = "rbxassetid://6015897843"
+Converted["_DropShadow1"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_DropShadow1"].ImageContent = Content
+Converted["_DropShadow1"].ImageTransparency = 0.5
+Converted["_DropShadow1"].ScaleType = Enum.ScaleType.Slice
+Converted["_DropShadow1"].SliceCenter = Rect.new(49, 49, 450, 450)
+Converted["_DropShadow1"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_DropShadow1"].BackgroundTransparency = 1
+Converted["_DropShadow1"].BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036)
+Converted["_DropShadow1"].BorderSizePixel = 0
+Converted["_DropShadow1"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_DropShadow1"].Size = UDim2.new(1, 47, 1, 47)
+Converted["_DropShadow1"].ZIndex = 0
+Converted["_DropShadow1"].Name = "DropShadow"
+Converted["_DropShadow1"].Parent = Converted["_DropShadowHolder1"]
+
+Converted["_clicking"].SoundId = "rbxassetid://6042053626"
+Converted["_clicking"].Name = "clicking"
+Converted["_clicking"].Parent = Converted["_GoodBoi"]
+
+Converted["_hovers"].SoundId = "rbxassetid://552900451"
+Converted["_hovers"].Name = "hovers"
+Converted["_hovers"].Parent = Converted["_GoodBoi"]
+
+Converted["_GoodBoi"].Parent = game.CoreGui
+
+local fake_module_scripts = {}
+
+local function SGRP_fake_script() -- Fake Script: Workspace.GoodBoi.Toggle.ToggleCode
+    local script = Instance.new("LocalScript")
+    script.Name = "ToggleCode"
+    script.Parent = Converted["_Toggle"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local enabled = false
+	
+	script.Parent.Main:TweenPosition(
+		UDim2.new(0.5, 0 , 0, -5),
+		Enum.EasingDirection.InOut,
+		Enum.EasingStyle.Quint,
+		1
+	)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		enabled = not enabled
+		
+		if enabled then
+			script.Parent.Main:TweenPosition(
+				UDim2.new(0, 0 , 50, 0),
+				Enum.EasingDirection.InOut,
+				Enum.EasingStyle.Quint,
+				1
+			)
+		else
+			script.Parent.Main:TweenPosition(
+				UDim2.new(0.5, 0 , 0, -5),
+				Enum.EasingDirection.InOut,
+				Enum.EasingStyle.Quint,
+				1
+			)
+		end
 	end)
 end
-coroutine.wrap(closeButton)()
-local function runButton() 
-	local script = Instance.new('LocalScript', launch)
+local function PCCQN_fake_script() -- Fake Script: Workspace.GoodBoi.Toggle.BlurRemover
+    local script = Instance.new("LocalScript")
+    script.Name = "BlurRemover"
+    script.Parent = Converted["_Toggle"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-	local run = script.Parent
-	local main = script.Parent.Parent
-	run.MouseButton1Click:Connect(function()
-		-- Gui to Lua
-		-- Version: 3.2
-	
-		-- Instances:
-	
-		local ScreenGui = Instance.new("ScreenGui")
-		local Frame = Instance.new("Frame")
-		local UICorner = Instance.new("UICorner")
-		local Pages = Instance.new("TextLabel")
-		local Generators = Instance.new("TextLabel")
-		local Slender = Instance.new("TextLabel")
-	
-		--Properties:
-	
-		ScreenGui.Parent = game.CoreGui
-		ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-	
-		Frame.Parent = ScreenGui
-		Frame.AnchorPoint = Vector2.new(0.5, 0.5)
-		Frame.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
-		Frame.Position = UDim2.new(0.0873715281, 0, 0.5, 0)
-		Frame.Selectable = true
-		Frame.Active = true
-		Frame.Draggable = true
-		Frame.Size = UDim2.new(0.100000001, 0, 0.300000012, 0)
-	
-		UICorner.Parent = Frame
-	
-		Pages.Name = "Pages"
-		Pages.Parent = Frame
-		Pages.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-		Pages.BorderSizePixel = 0
-		Pages.Position = UDim2.new(0, 0, 0.119189508, 0)
-		Pages.Size = UDim2.new(1, 0, 0.189511254, 0)
-		Pages.Font = Enum.Font.SourceSans
-		Pages.Text = "Show Pages (Z)"
-		Pages.TextColor3 = Color3.fromRGB(255, 255, 255)
-		Pages.TextScaled = true
-		Pages.TextSize = 14.000
-		Pages.TextWrapped = true
-	
-		Generators.Name = "GENERATORS"
-		Generators.Parent = Frame
-		Generators.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-		Generators.BorderSizePixel = 0
-		Generators.Position = UDim2.new(0, 0, 0.69129914, 0)
-		Generators.Size = UDim2.new(1, 0, 0.189511254, 0)
-		Generators.Font = Enum.Font.SourceSans
-		Generators.Text = "Show Generators (X)"
-		Generators.TextColor3 = Color3.fromRGB(255, 255, 255)
-		Generators.TextScaled = true
-		Generators.TextSize = 14.000
-		Generators.TextWrapped = true
-	
-		Slender.Name = "Slender"
-		Slender.Parent = Frame
-		Slender.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-		Slender.BorderSizePixel = 0
-		Slender.Position = UDim2.new(0, 0, 0.40524435, 0)
-		Slender.Size = UDim2.new(1, 0, 0.189511254, 0)
-		Slender.Font = Enum.Font.SourceSans
-		Slender.Text = "Show Slender (C)"
-		Slender.TextColor3 = Color3.fromRGB(255, 255, 255)
-		Slender.TextScaled = true
-		Slender.TextSize = 14.000
-		Slender.TextWrapped = true
-	
-		-- Scripts:
-	
-		local function TCIFN_fake_script() -- Pages.PageScript
-			local script = Instance.new('LocalScript', Pages)
-	
-			local InS = game:GetService("UserInputService")
-	
-			local function createGuiPages(parent)
-				if parent.Transparency == 0 then
-					local BGui = Instance.new("BillboardGui")
-					BGui.Parent = parent
-					BGui.AlwaysOnTop = true
-					BGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-					BGui.StudsOffset = Vector3.new(0, 3, 0)
-					BGui.Size = UDim2.new(5, 0, 1.5, 0)
-	
-					local text = Instance.new("TextLabel")
-					text.Parent = BGui
-					text.Text = "++"
-					text.TextScaled = true
-					text.BackgroundTransparency = 1
-					text.Size = UDim2.new(1, 0, 1, 0)
-					text.TextColor3 = Color3.fromRGB(255, 255, 255)
-				else
-	
-				end
+	while true do
+		task.wait()
+		for fck, ngg in pairs(game.Lighting:GetDescendants()) do
+			if ngg:IsA("BlurEffect") then
+				ngg:Destroy()
 			end
-	
-	
-			InS.InputBegan:Connect(function(input, GPE)
-				if input.KeyCode == Enum.KeyCode.Z then
-					if game.Workspace.MAP.Pages ~= nil and game.Workspace.MAP.HPageSpawns ~= nil then
-	
-						local model1 = game.Workspace.MAP.Pages
-	
-						for _, v in pairs(model1:GetChildren()) do
-							createGuiPages(v)
-	
-							v.Changed:Connect(function()
-								if v.Transparency == 1 then
-	
-									local BGui = v.BillboardGui
-									BGui:Destroy()
-								end
-							end)
-						end
-	
-						local model2 = game.Workspace.MAP.HPageSpawns
-	
-						for _, v in pairs(model2:GetChildren()) do
-							createGuiPages(v)
-	
-							v.Changed:Connect(function()
-								if v.Transparency == 1 then
-	
-									local BGui = v.BillboardGui
-									BGui:Destroy()
-								end
-							end)
-						end
-					end
-				end
-			end)
 		end
-		coroutine.wrap(TCIFN_fake_script)()
-		local function WBNHNPG_fake_script() -- Generators.GenScript
-			local script = Instance.new('LocalScript', Generators)
+	end
+end
+local function YUIWR_fake_script() -- Fake Script: Workspace.GoodBoi.Toggle.Main.BottomBar.Icon.CloseGUI
+    local script = Instance.new("LocalScript")
+    script.Name = "CloseGUI"
+    script.Parent = Converted["_Icon"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local lastClickTime = 0
+	local doubleClickInterval = 0.5
+	local actionPerformed = false
 	
-			local InS = game:GetService("UserInputService")
-	
-			local function createGuiGens(parent)
-				local BGui = Instance.new("BillboardGui")
-				BGui.Parent = parent
-				BGui.AlwaysOnTop = true
-				BGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-				BGui.StudsOffset = Vector3.new(0, 3, 0)
-				BGui.Size = UDim2.new(5, 0, 1.5, 0)
-	
-				local text = Instance.new("TextLabel")
-				text.Parent = BGui
-				text.TextScaled = true
-				text.BackgroundTransparency = 1
-				text.Size = UDim2.new(1, 0, 1, 0)
-				text.TextColor3 = Color3.fromRGB(0, 255, 0)
-				text.Text = "/\"
-	
-				if parent:FindFirstChild("On") then
-	
-					if parent.On.Value == true then
-						text.Text = "Generator (Activated)"
-						text.TextColor3 = Color3.fromRGB(0, 0, 255)
-					end
-				end
-			end
-	
-			InS.InputBegan:Connect(function(input, GPE)
-				if input.KeyCode == Enum.KeyCode.X then
-	
-					local model = game.Workspace.MAP.GENS
-					for _, v in pairs(model:GetChildren()) do
-						createGuiGens(v)
-	
-						if v:FindFirstChild("On") then
-							local isOn = v.On
-	
-							isOn.Changed:Connect(function()
-								v.BillboardGui.TextLabel.Text = "Generator (Activated)"
-								v.BillboardGui.TextLabel.TextColor3 = Color3.fromRGB(0, 0, 255)
-							end)
-						else
-	
-						end
-					end
-	
-				end
-			end)
+	script.Parent.MouseButton1Click:Connect(function()
+		if not actionPerformed then
+			actionPerformed = true
+			game.StarterGui:SetCore("SendNotification", {
+				Title = "SKEPPY0_0MAN";
+				Text = "Click it twice to destroy GUI...";
+				Duration = 2.5;
+			})
 		end
-		coroutine.wrap(WBNHNPG_fake_script)()
-		local function DXQRVQV_fake_script() -- Slender.SlenderScript
-			local script = Instance.new('LocalScript', Slender)
+	end)
 	
-			local InS = game:GetService("UserInputService")
+	local function onClick()
+		local currentTime = tick()
+		local timeSinceLastClick = currentTime - lastClickTime
+		lastClickTime = currentTime
 	
-			local function createGuiSlender(parent)
-				local BGui = Instance.new("BillboardGui")
-				BGui.Parent = parent
-				BGui.AlwaysOnTop = true
-				BGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-				BGui.StudsOffset = Vector3.new(0, 3, 0)
-				BGui.Size = UDim2.new(5, 0, 1.5, 0)
-	
-				local text = Instance.new("TextLabel")
-				text.Parent = BGui
-				text.Text = ":{"
-				text.TextScaled = true
-				text.BackgroundTransparency = 1
-				text.Size = UDim2.new(1, 0, 1, 0)
-				text.TextColor3 = Color3.fromRGB(255, 0, 0)
-			end
-	
-	
-			InS.InputBegan:Connect(function(input, GPE)
-				if input.KeyCode == Enum.KeyCode.C then
-	
-					for _, v in pairs(game.Workspace:GetChildren()) do
-						if v:FindFirstChild("SlenderProp") then
-							createGuiSlender(v)
-						end
-					end
-				end
-	
-			end)
+		if timeSinceLastClick <= doubleClickInterval then
+			game.StarterGui:SetCore("SendNotification", {
+				Title = "CREEPSTU";
+				Text = "You just clicked it two times! Closing this GUI...";
+				Duration = 2.5;
+			})
+			wait(math.random() * 7.5)
+			script.Parent.Parent.Parent.Parent.Parent:Destroy()
 		end
-		coroutine.wrap(DXQRVQV_fake_script)()
-		local function LSGPTFK_fake_script() -- Frame.HideShow
-			local script = Instance.new('LocalScript', Frame)
+	end
 	
-			local frame = script.Parent
-			local InS = game:GetService("UserInputService")
+	script.Parent.MouseButton1Click:Connect(onClick)
 	
-			InS.InputBegan:Connect(function(input, GPE)
-				if input.KeyCode == Enum.KeyCode.LeftControl then
-					if frame.Visible == true then
-						frame.Visible = false
-					else
-						frame.Visible = true
-					end
-				end
-			end)
+	
+	
+end
+local function HHSMUME_fake_script() -- Fake Script: Workspace.GoodBoi.Toggle.Main.BottomBar.Title.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Title"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	while true do
+		wait(5)
+	
+		script.Parent:TweenSize(
+			UDim2.new(0, 0, 0, 0),
+			Enum.EasingDirection.InOut,
+			Enum.EasingStyle.Quart
+		)
+	
+		wait(5)
+	
+		script.Parent.Parent.Slogan:TweenSize(
+			UDim2.new(0, 0, 0, 0),
+			Enum.EasingDirection.InOut,
+			Enum.EasingStyle.Quart
+		)
+	end
+end
+local function WEBLDP_fake_script() -- Fake Script: Workspace.GoodBoi.Toggle.Main.BottomBar.Siapa?.LocalPlayerCode
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalPlayerCode"
+    script.Parent = Converted["_Siapa?"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local enable = false
+	local actionPerformed = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if not actionPerformed then
+			actionPerformed = true
+			game.StarterGui:SetCore("SendNotification", {
+				Title = "SKEPPY0_0MAN";
+				Text = "Wondering where Hero role at? It is combined with Sheriff.";
+				Duration = 2.5;
+			})
 		end
-		coroutine.wrap(LSGPTFK_fake_script)()
-		wait()
-		main:Destroy()
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if enable == false then
+			enable = true
+			script.Parent.Parent.Parent["2FrameOfMain"].Visible = true
+			script.Parent.Parent.Parent["FrameOfMain"].Visible = false
+		else
+			enable = false
+			script.Parent.Parent.Parent["2FrameOfMain"].Visible = false
+			script.Parent.Parent.Parent["FrameOfMain"].Visible = true
+		end
 	end)
 end
-coroutine.wrap(runButton)()
-local function draggabler()
-	local script = Instance.new('Script', main)
+local function TQCNS_fake_script() -- Fake Script: Workspace.GoodBoi.Toggle.Main.BottomBar.Slogan.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Slogan"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-	local scr = script.Parent
-	scr.Active = true
-	scr.Draggable = true
-	scr.Selectable = true
+	while true do
+		wait(5)
+	
+		script.Parent:TweenSize(
+			UDim2.new(0, 200, 1, 0),
+			Enum.EasingDirection.InOut,
+			Enum.EasingStyle.Quart
+		)
+	
+		wait(5)
+		
+		script.Parent.Parent.Title:TweenSize(
+			UDim2.new(0, 225, 1, 0),
+			Enum.EasingDirection.InOut,
+			Enum.EasingStyle.Quart
+		)
+	end
 end
-coroutine.wrap(draggabler)()
-local function functionStringConnected1() -- CriticalUI.FunctionStringConnected1 
-	local script = Instance.new('LocalScript', CriticalUI)
+local function ANQX_fake_script() -- Fake Script: Workspace.GoodBoi.Toggle.Main.FrameOfMain.Extra-SP.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Extra-SP"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-	game:GetService('SoundService').RespectFilteringEnabled = false
+	script.Parent.MouseButton1Click:Connect(function()
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "CREEPSTU";
+			Text = "Draws boxes around other players.";
+			Duration = 2.5;
+		})
+		
+		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/WRD%20ESP.txt"))()
+	end)
 end
-coroutine.wrap(functionStringConnected1)()
+local function LSDS_fake_script() -- Fake Script: Workspace.GoodBoi.Toggle.Main.FrameOfMain.TakeSheriff'sGun.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_TakeSheriff'sGun"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local actionPerformed = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+	    if not actionPerformed then
+	        actionPerformed = true
+	        game:GetService("StarterGui"):SetCore("SendNotification", {
+	            Title = "SKEPPY0_0MAN:",
+	            Text = "I am not confirmed yet this button is working or not.",
+	            Icon = "rbxassetid://130233307071657",
+	            Duration = 2.5
+	        })
+	
+	        for x, y in pairs(workspace:GetDescendants()) do
+	            if y and y.Name == "TouchInterest" and y.Parent.Name == "Orb" and y.Parent.Parent.Name == "RevolverPickUp" then
+	                if firetouchinterest then
+	                    firetouchinterest(game.Players.LocalPlayer.Character.Head, y, 0)
+	                else
+	                    game.StarterGui:SetCore("SendNotification", {
+	                        Title = "CREEPSTU",
+	                        Text = "You might downloaded the wrong executor, because this button could not perform.",
+	                        Duration = 2.5
+	                    })
+	                    return
+	                end
+	            end
+	        end
+	    end
+	end)
+	
+	
+end
+local function HUZP_fake_script() -- Fake Script: Workspace.GoodBoi.Toggle.Main.FrameOfMain.Aimbot.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Aimbot"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			Title = "CREEPSTU:",
+			Text = "Snaps aim to player heads.",
+			Icon = "rbxassetid://130233307071657",
+			Duration = 2.5
+		})
+		
+		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/WRD%20Aimbot.txt"))()
+	end)
+end
+local function HPSCQ_fake_script() -- Fake Script: Workspace.GoodBoi.Toggle.Main.FrameOfMain.UnboxCrates.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_UnboxCrates"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "SKEPPY0_0MAN";
+			Text = "Respawn your character if you want to stop unboxing it.";
+			Duration = 2.5;
+		})
+		
+		local char = game.Players.LocalPlayer.Character
+		repeat
+			local args = {
+				[1] = game.ReplicatedStorage:WaitForChild("ShopEntries"):WaitForChild("RevolverSkins"):WaitForChild("Revolver Box #1"),
+				[2] = game.ReplicatedStorage:WaitForChild("ShopEntries"):WaitForChild("RevolverSkins"):WaitForChild("Revolver Box #2"),
+				[3] = game.ReplicatedStorage:WaitForChild("ShopEntries"):WaitForChild("RevolverSkins"):WaitForChild("Revolver Box #3"),
+				[4] = game.ReplicatedStorage:WaitForChild("ShopEntries"):WaitForChild("RevolverSkins"):WaitForChild("Revolver Box #4"),
+				[5] = game.ReplicatedStorage:WaitForChild("ShopEntries"):WaitForChild("KnifeSkins"):WaitForChild("Knife Box #1"),
+				[6] = game.ReplicatedStorage:WaitForChild("ShopEntries"):WaitForChild("KnifeSkins"):WaitForChild("Knife Box #2"),
+				[7] = game.ReplicatedStorage:WaitForChild("ShopEntries"):WaitForChild("KnifeSkins"):WaitForChild("Knife Box #3"),
+				[8] = game.ReplicatedStorage:WaitForChild("ShopEntries"):WaitForChild("KnifeSkins"):WaitForChild("Knife Box #4")
+			}
+	
+			game.ReplicatedStorage:WaitForChild("Interactions"):WaitForChild("Server"):WaitForChild("BuyShopItem"):InvokeServer(unpack(args))
+		until char.Humanoid.Health == 0
+	end)
+end
+local function HBGUVS_fake_script() -- Fake Script: Workspace.GoodBoi.Toggle.Main.FrameOfMain.CollectCoins.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_CollectCoins"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local char = game.Players.LocalPlayer.Character
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "SKEPPY0_0MAN";
+			Text = "Respawn your character if you want to stop collecting it.";
+			Duration = 2.5;
+		})
+		repeat
+			for x, y in pairs(workspace:GetDescendants()) do
+				if y:IsA('Part') and y.Name == "Coin" then
+					char.HumanoidRootPart.CFrame = y.CFrame
+				end
+			end
+			wait()
+		until char.Humanoid.Health == 0
+	end)
+	
+end
+local function VAUU_fake_script() -- Fake Script: Workspace.GoodBoi.Toggle.Main.FrameOfMain.TeleportToLobby.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_TeleportToLobby"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "SKEPPY0_0MAN";
+			Text = "For sure, this will moves your character from where you are to a specific spawn location, lobby.";
+			Duration = 2.5;
+		})
+		
+		local SpawnLocate = game:GetService("Workspace").Lobby.Spawns.Model:FindFirstChild("SpawnLocation")
+		local char = game.Players.LocalPlayer.Character
+	
+		char.HumanoidRootPart.CFrame = SpawnLocate.CFrame
+	end)
+end
+local function SDUGLJG_fake_script() -- Fake Script: Workspace.GoodBoi.Toggle.Main.2FrameOfMain.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_2FrameOfMain"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	while true do
+		for _, player in pairs(game.Players:GetPlayers()) do
+			for _, tool in pairs(player.Backpack:GetChildren()) do
+				if tool:IsA('Tool') then
+					if tool.Name == "Knife" then
+						script.Parent.MurdKonsol.Text = "Pembunuh: " .. player.DisplayName .. " (@" .. player.Name .. ")"
+					elseif tool.Name == "Revolver" then
+						script.Parent.SheriffKonsol.Text = "Syerif: " .. player.DisplayName .. " (@" .. player.Name .. ")"
+					end
+				end
+			end
+		end
+	
+		wait(1)
+	end
+end
+local function BCPGZA_fake_script() -- Fake Script: Workspace.GoodBoi.Toggle.Dragger
+    local script = Instance.new("LocalScript")
+    script.Name = "Dragger"
+    script.Parent = Converted["_Toggle"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local tog = script.Parent
+	tog.Active = true
+	tog.Selectable = true
+	tog.Draggable = true
+end
+local function URCL_fake_script() -- Fake Script: Workspace.GoodBoi.SoundSystem
+    local script = Instance.new("LocalScript")
+    script.Name = "SoundSystem"
+    script.Parent = Converted["_GoodBoi"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local function playSound(sound)
+		script.Parent[sound]:Play()
+	end
+	
+	for _, v in pairs(script.Parent:GetDescendants()) do
+		if v:IsA('TextButton') or v:IsA('ImageButton') then
+			v.MouseEnter:Connect(function()
+				playSound("hovers")
+			end)
+	
+			v.MouseButton1Click:Connect(function()
+				playSound("clicking")
+			end)
+		end
+	end
+end
+local function SLAK_fake_script() -- Fake Script: Workspace.GoodBoi.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_GoodBoi"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "Oh!";
+		Text = "Thank you for executing this script?";
+		Duration = 5;
+	})
+end
+
+coroutine.wrap(SGRP_fake_script)()
+coroutine.wrap(PCCQN_fake_script)()
+coroutine.wrap(YUIWR_fake_script)()
+coroutine.wrap(HHSMUME_fake_script)()
+coroutine.wrap(WEBLDP_fake_script)()
+coroutine.wrap(TQCNS_fake_script)()
+coroutine.wrap(ANQX_fake_script)()
+coroutine.wrap(LSDS_fake_script)()
+coroutine.wrap(HUZP_fake_script)()
+coroutine.wrap(HPSCQ_fake_script)()
+coroutine.wrap(HBGUVS_fake_script)()
+coroutine.wrap(VAUU_fake_script)()
+coroutine.wrap(SDUGLJG_fake_script)()
+coroutine.wrap(BCPGZA_fake_script)()
+coroutine.wrap(URCL_fake_script)()
+coroutine.wrap(SLAK_fake_script)()
