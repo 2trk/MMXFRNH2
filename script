@@ -443,6 +443,7 @@ local function SGRP_fake_script() -- Fake Script: Workspace.GoodBoi.Toggle.Toggl
 				Enum.EasingStyle.Quint,
 				1
 			)
+			script.Parent.Text = "Restore Up"
 		else
 			script.Parent.Main:TweenPosition(
 				UDim2.new(0.5, 0 , 0, -5),
@@ -450,6 +451,7 @@ local function SGRP_fake_script() -- Fake Script: Workspace.GoodBoi.Toggle.Toggl
 				Enum.EasingStyle.Quint,
 				1
 			)
+			script.Parent.Text = "Restore Down"
 		end
 	end)
 end
@@ -577,7 +579,8 @@ local function WEBLDP_fake_script() -- Fake Script: Workspace.GoodBoi.Toggle.Mai
 			game.StarterGui:SetCore("SendNotification", {
 				Title = "SKEPPY0_0MAN";
 				Text = "Wondering where Hero role at? It is combined with Sheriff.";
-				Duration = 2.5;
+				Button1 = "K",
+				Duration = math.huge;
 			})
 		end
 	end)
@@ -642,7 +645,7 @@ local function ANQX_fake_script() -- Fake Script: Workspace.GoodBoi.Toggle.Main.
 		game.StarterGui:SetCore("SendNotification", {
 			Title = "CREEPSTU";
 			Text = "Draws boxes around other players.";
-			Duration = 2.5;
+			Duration = 5;
 		})
 		
 		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/WRD%20ESP.txt"))()
@@ -668,9 +671,9 @@ local function LSDS_fake_script() -- Fake Script: Workspace.GoodBoi.Toggle.Main.
 	        actionPerformed = true
 	        game:GetService("StarterGui"):SetCore("SendNotification", {
 	            Title = "SKEPPY0_0MAN:",
-	            Text = "I am not confirmed yet this button is working or not.",
-	            Icon = "rbxassetid://130233307071657",
-	            Duration = 2.5
+				Text = "I am not confirmed yet this button is working or not.",
+				Button1 = "K",
+	            Duration = math.huge
 	        })
 	
 	        for x, y in pairs(workspace:GetDescendants()) do
@@ -709,8 +712,7 @@ local function HUZP_fake_script() -- Fake Script: Workspace.GoodBoi.Toggle.Main.
 		game:GetService("StarterGui"):SetCore("SendNotification", {
 			Title = "CREEPSTU:",
 			Text = "Snaps aim to player heads.",
-			Icon = "rbxassetid://130233307071657",
-			Duration = 2.5
+			Duration = 5
 		})
 		
 		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/WRD%20Aimbot.txt"))()
@@ -733,7 +735,7 @@ local function HPSCQ_fake_script() -- Fake Script: Workspace.GoodBoi.Toggle.Main
 		game.StarterGui:SetCore("SendNotification", {
 			Title = "SKEPPY0_0MAN";
 			Text = "Respawn your character if you want to stop unboxing it.";
-			Duration = 2.5;
+			Duration = 5;
 		})
 		
 		local char = game.Players.LocalPlayer.Character
@@ -773,7 +775,7 @@ local function HBGUVS_fake_script() -- Fake Script: Workspace.GoodBoi.Toggle.Mai
 		game.StarterGui:SetCore("SendNotification", {
 			Title = "SKEPPY0_0MAN";
 			Text = "Respawn your character if you want to stop collecting it.";
-			Duration = 2.5;
+			Duration = 5;
 		})
 		repeat
 			for x, y in pairs(workspace:GetDescendants()) do
@@ -797,14 +799,21 @@ local function VAUU_fake_script() -- Fake Script: Workspace.GoodBoi.Toggle.Main.
             return fake()
         end
         return req(obj)
-    end
+	end
+	
+	local actionPerformed = false
 
 	script.Parent.MouseButton1Click:Connect(function()
-		game.StarterGui:SetCore("SendNotification", {
+		if not actionPerformed then
+			actionPerformed = true
+			game.StarterGui:SetCore("SendNotification", {
 			Title = "SKEPPY0_0MAN";
-			Text = "For sure, this will moves your character from where you are to a specific spawn location, lobby.";
-			Duration = 2.5;
+			Text = "For sure, this will move your character from where you are to a specific spawn location, lobby.";
+			Button1 = "K",
+			Duration = math.huge;
 		})
+		end
+		
 		
 		local SpawnLocate = game:GetService("Workspace").Lobby.Spawns.Model:FindFirstChild("SpawnLocation")
 		local char = game.Players.LocalPlayer.Character
