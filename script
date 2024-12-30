@@ -126,7 +126,6 @@ Converted["_UICorner2"].CornerRadius = UDim.new(0, 10)
 Converted["_UICorner2"].Parent = Converted["_BottomBar"]
 
 Converted["_Icon"].Image = "rbxassetid://6510893737"
-Converted["_Icon"].ImageContent = Content
 Converted["_Icon"].AnchorPoint = Vector2.new(0, 0.5)
 Converted["_Icon"].BackgroundColor3 = Color3.fromRGB(111.00000858306885, 111.00000858306885, 111.00000858306885)
 Converted["_Icon"].BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -163,7 +162,6 @@ Converted["_UITextSizeConstraint1"].Parent = Converted["_Title"]
 
 Converted["_Siapa?"].Image = "http://www.roblox.com/asset/?id=6031280883"
 Converted["_Siapa?"].ImageColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Siapa?"].ImageContent = Content
 Converted["_Siapa?"].AnchorPoint = Vector2.new(1, 0.5)
 Converted["_Siapa?"].BackgroundColor3 = Color3.fromRGB(111.00000858306885, 111.00000858306885, 111.00000858306885)
 Converted["_Siapa?"].BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -365,7 +363,6 @@ Converted["_DropShadowHolder"].Parent = Converted["_Main"]
 
 Converted["_DropShadow"].Image = "rbxassetid://6015897843"
 Converted["_DropShadow"].ImageColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_DropShadow"].ImageContent = Content
 Converted["_DropShadow"].ImageTransparency = 0.5
 Converted["_DropShadow"].ScaleType = Enum.ScaleType.Slice
 Converted["_DropShadow"].SliceCenter = Rect.new(49, 49, 450, 450)
@@ -389,7 +386,6 @@ Converted["_DropShadowHolder1"].Parent = Converted["_Toggle"]
 
 Converted["_DropShadow1"].Image = "rbxassetid://6015897843"
 Converted["_DropShadow1"].ImageColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_DropShadow1"].ImageContent = Content
 Converted["_DropShadow1"].ImageTransparency = 0.5
 Converted["_DropShadow1"].ScaleType = Enum.ScaleType.Slice
 Converted["_DropShadow1"].SliceCenter = Rect.new(49, 49, 450, 450)
